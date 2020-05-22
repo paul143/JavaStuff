@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class HelloWorld{
+public class RemoveDuplicateInString{
  
       public static void main(String []args){
          
