@@ -1,0 +1,27 @@
+/* Online Java Compiler and Editor */
+import java.util.*;
+import java.util.stream.Collectors;
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello, World!");
+        
+        List<Integer> numberList = Arrays.asList(6,7,8,9,6,7,10);
+        Set <Integer> numberSet = new HashSet<>();
+        Set <Integer> uniqueNumsSet = new HashSet<>();
+
+        Set <Integer> dupNums = numberList.stream().filter(number -> !numberSet.add(number)).collect(Collectors.toSet());
+        
+        Set <Integer> uniqueNums = numberList.stream().filter(number -> uniqueNumsSet.add(number)).collect(Collectors.toSet());
+        
+        System.out.println(dupNums);
+        
+        System.out.println(uniqueNums);
+        for(int ss : dupNums){
+            uniqueNums.remove(ss);
+        }
+                System.out.println(uniqueNums);
+
+
+     }
+}
